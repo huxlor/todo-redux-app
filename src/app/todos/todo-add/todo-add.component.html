@@ -1,1 +1,4 @@
-<p>todo-add works!</p>
+<header class="header">
+  <h1>todos</h1>
+  <input [formControl]="txtInput" class="new-todo" placeholder="What needs to be done?" autofocus (keyup.enter)="agregar()">
+</header>

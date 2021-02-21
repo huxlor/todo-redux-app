@@ -1,1 +1,10 @@
-<p>todo-footer works!</p>
+<footer class="footer">
+  <span class="todo-count"><strong>{{ pendientes }}</strong> item left</span>
+  <ul class="filters">
+    <li *ngFor="let filtro of filtros" 
+        (click)="cambiarFiltro(filtro)">
+      <a [ngClass]="{'selected': filtro === filtroActual}">{{filtro | titlecase}}</a>
+    </li>
+  </ul>
+  <button class="clear-completed" (click)="limpiar()">Limpiar Completados</button>
+</footer>
